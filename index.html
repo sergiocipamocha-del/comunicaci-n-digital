@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Uso Responsable de la Tecnologia </title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- SONIDO -->
+
+<audio id="clickSound"
+src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+</audio>
+
+<!-- SUBTITULOS -->
+
+<div id="subtitulos"></div>
+
+<!-- BARRA -->
+
+<div class="barraAccesibilidad">
+
+<button onclick="leerTodo()">
+Leer Pantalla
+</button>
+
+<button onclick="modoOscuro()">
+Modo Oscuro
+</button>
+
+<button onclick="detenerVoz()">
+Detener Voz
+</button>
+
+</div>
+
+<!-- BURBUJAS -->
+
+<div class="burbujas">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<h1 onmouseover="hablar('Bienvenido a la plataforma educativa ')">
+
+Comunicación digital  
+
+</h1>
+
+<p class="subtitulo"
+onmouseover="hablar(this.innerText)">
+
+mediante el uso de herramientas tecnológicas
+
+</p>
+
+<img src="imagenes/inclusion.png"
+class="personajeGrande"
+onmouseover="vozNina('Hola bienvenido amigo')"
+>
+
+</header>
+
+<!-- MENU -->
+
+<nav>
+
+<button onclick="mostrar('inicio')">Inicio</button>
+
+<button onclick="mostrar('unidad1')">Unidad 1</button>
+
+<button onclick="mostrar('unidad2')">Unidad 2</button>
+
+<button onclick="mostrar('unidad3')">Unidad 3</button>
+<button onclick="mostrar('evaluacion')"> Misión: Mundo Digital</button>
+
+
+</nav>
+
+<!-- INICIO -->
+
+<section id="inicio" class="seccion activa">
+
+<h2 onmouseover="hablar('Pantalla principal')">
+
+Bienvenidos
+
+</h2>
+
+<div class="personajes">
+
+<img src="imagenes/descarga.jpg"
+onmouseover="vozNina('Niño feliz')"
+>
+
+<img
+src="imagenes/descarga niña.jpg"
+onmouseover="vozNino('Niña feliz')"
+>
+
+</div>
+
+<div class="textoGrande">
+
+<p onmouseover="hablar(this.innerText)">
+
+Esta plataforma ayuda a aprender usando sonidos
+imágenes, pictogramas y actividades, Todos los niños pueden aprender de manera fácil,
+divertida e interactiva, La plataforma está diseñada para diferentes poblaciones.
+
+</p>
+
+
+</div>
+
+</section>
+
+<!-- UNIDAD 1 -->
+
+<section id="unidad1" class="seccion">
+
+<h2 onmouseover="hablar('Herramientas digitales')">
+
+Herramientas Digitales
+
+</h2>
+
+<div class="explicacion">
+
+<p onmouseover="hablar(this.innerText)">
+
+Las herramientas digitales ayudan a las personas
+a comunicarse usando tecnología Mediante las diferentes herramientas que tenemos a nuestra disposicion,
+Podemos escribir mensajes, enviar imágenes y grabar voz y buscar informacion .
+
+</p>
+
+
+<div class="tarjetas">
+
+<!-- MICROFONO -->
+
+<div class="tarjeta"
+
+onmouseover="hablar('El micrófono sirve para grabar sonidos y voces. Ayuda a hablar en clases virtuales y llamadas. También ayuda a niños que prefieren hablar en vez de escribir.')">
+<h3>MICRÓFONO</h3>
+<img src="imagenes/microfono.jpg">
+
+
+
+<p>
+
+El micrófono sirve para grabar sonidos y voces.
+
+</p>
+
+<p>
+
+Ayuda a hablar en clases virtuales y llamadas.
+
+</p>
+
+<p>
+
+También ayuda a niños que prefieren hablar en vez de escribir.
+
+</p>
+
+</div>
+
+<!-- CHAT -->
+
+<div class="tarjeta"
+
+onmouseover="hablar('El chat permite escribir mensajes usando internet, Ayuda a hablar con profesores y compañeros, También sirve para compartir ideas y aprender.')">
+<h3>CHAT</h3>
+<img src="imagenes/download-removebg-preview.png">
+
+
+
+<p>
+
+El chat permite escribir mensajes usando internet.
+
+</p>
+
+<p>
+
+Ayuda a hablar con profesores y compañeros.
+
+</p>
+
+<p>
+
+También sirve para compartir ideas y aprender.
+
+</p>
+
+</div>
+
+<!-- IMAGEN -->
+
+<div class="tarjeta"
+
+onmouseover="hablar('Las imágenes ayudan a comunicar emociones e ideas, Muchas personas aprenden mejor viendo dibujos y colores, Las imágenes hacen el aprendizaje más divertido..')">
+
+<h3>IMAGEN</h3>
+<img src="imagenes/imagenes.jpg">
+
+
+<p>
+
+Las imágenes ayudan a comunicar emociones e ideas.
+
+</p>
+
+<p>
+
+Muchas personas aprenden mejor viendo dibujos y colores.
+
+</p>
+
+<p>
+
+Las imágenes hacen el aprendizaje más divertido.
+
+</p>
+
+</div>
+
+<!-- AUDIO -->
+
+<div class="tarjeta"
+
+onmouseover="hablar('El audio permite escuchar música, voces y sonidos, Ayuda a niños con discapacidad visual, XºTambién mejora la atención y la comprensión..')">
+
+<h3>AUDIO</h3>
+<img src="imagenes/audio.png">
+
+
+<p>
+
+El audio permite escuchar música, voces y sonidos.
+
+</p>
+
+<p>
+
+Ayuda a niños con discapacidad visual.
+
+</p>
+
+<p>
+
+También mejora la atención y la comprensión.
+
+</p>
+
+</div>
+
+<!-- PICTOGRAMAS -->
+
+<div class="tarjeta"
+
+onmouseover="hablar('Los pictogramas usan dibujos para comunicar ideas, Ayudan a expresar emociones y necesidades, Facilitan la comunicación para todos..')">
+<h3>PICTOGRAMAS</h3>
+<img src="imagenes/pictogramas.jpg">
+
+
+
+<p>
+
+Los pictogramas usan dibujos para comunicar ideas.
+
+</p>
+
+<p>
+
+Ayudan a expresar emociones y necesidades.
+
+</p>
+
+<p>
+
+Facilitan la comunicación para todos.
+
+</p>
+
+</div>
+
+</div>
+<div class="actividadCompleta"></div>
+
+<div>
+
+<h2 onmouseover="hablar('Actividad inclusiva')">
+Actividad Inclusiva
+</h2>
+
+</div>
+
+<div class="instrucciones bonita">
+
+<h4 onmouseover="hablar('Instrucciones')">
+ INSTRUCCIONES
+</h4>
+
+<ol class="listaBonita">
+
+<li onmouseover="hablar(this.innerText)">
+Escucha la pregunta.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Responde usando botones, pictogramas o escribiendo.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Todas las formas funcionan.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Escucha la respuesta y aprende.
+</li>
+
+</ol>
+
+</div>
+
+<!-- PREGUNTA 1 -->
+
+<div class="situacion bonita">
+
+<h3> Pregunta 1</h3>
+
+<p>
+¿Qué herramienta sirve para grabar la voz?
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarP1('microfono')">
+ Micrófono
+</button>
+
+<button onclick="validarP1('imagen')">
+ Imagen
+</button>
+
+<button onclick="validarP1('chat')">
+ Chat
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarP1('microfono')">
+<img src="imagenes/micro.jpg">
+<p>Micrófono</p>
+</button>
+
+<button onclick="validarP1('imagen')">
+<img src="imagenes/image.png">
+<p>Imagen</p>
+</button>
+
+<button onclick="validarP1('chat')">
+<img src="imagenes/chat.jpg">
+<p>Chat</p>
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input type="text" id="p1"
+placeholder="Escribe tu respuesta">
+
+<button onclick="textoP1()">
+Enviar
+</button>
+
+</div>
+
+<div id="rp1"></div>
+
+</div>
+
+<!-- PREGUNTA 2 -->
+
+<div class="situacion bonita">
+
+<h3>Pregunta 2</h3>
+
+<p>
+¿Qué herramienta sirve para escribir mensajes?
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarP2('audio')">
+ Audio
+</button>
+
+<button onclick="validarP2('chat')">
+ Chat
+</button>
+
+<button onclick="validarP2('microfono')">
+ Micrófono
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarP2('audio')">
+<img src="imagenes/audio niño.jpg">
+<p>Audio</p>
+</button>
+
+<button onclick="validarP2('chat')">
+<img src="imagenes/chat.jpg">
+<p>Chat</p>
+</button>
+
+<button onclick="validarP2('microfono')">
+<img src="imagenes/micro.jpg">
+<p>Micrófono</p>
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input type="text" id="p2"
+placeholder="Escribe tu respuesta">
+
+<button onclick="textoP2()">
+Enviar
+</button>
+
+</div>
+
+<div id="rp2"></div>
+
+</div>
+
+<!-- PREGUNTA 3 -->
+
+<div class="situacion bonita">
+
+<h3> Pregunta 3</h3>
+
+<p>
+¿Qué ayuda a comunicar ideas usando dibujos?
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarP3('pictogramas')">
+ Pictogramas
+</button>
+
+<button onclick="validarP3('chat')">
+Chat
+</button>
+
+<button onclick="validarP3('audio')">
+ Audio
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarP3('pictogramas')">
+<img src="imagenes/picto.jpg">
+<p>Pictogramas</p>
+</button>
+
+<button onclick="validarP3('chat')">
+<img src="imagenes/chat.jpg">
+<p>Chat</p>
+</button>
+
+<button onclick="validarP3('audio')">
+<img src="imagenes/audio niño.jpg">
+<p>Audio</p>
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input type="text" id="p3"
+placeholder="Escribe tu respuesta">
+
+<button onclick="textoP3()">
+Enviar
+</button>
+
+</div>
+
+<div id="rp3"></div>
+
+</div>
+
+<!-- PREGUNTA 4 -->
+
+<div class="situacion bonita">
+
+<h3> Pregunta 4</h3>
+
+<p>
+¿Qué herramienta ayuda a escuchar sonidos?
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarP4('imagen')">
+ Imagen
+</button>
+
+<button onclick="validarP4('audio')">
+ Audio
+</button>
+
+<button onclick="validarP4('chat')">
+ Chat
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarP4('imagen')">
+<img src="imagenes/image.png">
+<p>Imagen</p>
+</button>
+
+<button onclick="validarP4('audio')">
+<img src="imagenes/audio niño.jpg">
+<p>Audio</p>
+</button>
+
+<button onclick="validarP4('chat')">
+<img src="imagenes/chat.jpg">
+<p>Chat</p>
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input type="text" id="p4"
+placeholder="Escribe tu respuesta">
+
+<button onclick="textoP4()">
+Enviar
+</button>
+
+</div>
+
+<div id="rp4"></div>
+
+</div>
+
+
+</section>
+
+<!-- UNIDAD 2 -->
+<section id="unidad2" class="seccion">
+
+<!--  EXPLICACIÓN  -->
+<div class="card bonita">
+
+<h3> ¿Qué es la comunicación digital?</h3>
+
+<p onmouseover="hablar(this.innerText)">
+La comunicación digital es la forma en que nos expresamos usando tecnología como celulares, computadores o tabletas.
+
+Podemos comunicarnos con texto, imágenes, audios  o pictogramas.
+
+Es importante crear mensajes claros, respetuosos y con sentido para que otras personas nos entiendan.
+</p>
+
+</div>
+
+<!--  INSTRUCCIONES  -->
+<div class="card instrucciones">
+
+<h4> INSTRUCCIONES</h4>
+
+<ol class="listaBonita">
+
+<li onmouseover="hablar(this.innerText)">
+Lee la explicación del tema.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Construye tu mensaje con texto, botones o pictogramas.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Tu mensaje debe tener sentido completo.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Presiona enviar para ver si es correcto.
+</li>
+
+</ol>
+
+</div>
+
+<!-- SITUACIÓN 1 -->
+<div class="card bonita situacion" id="caja1">
+
+<h3>Situación 1</h3>
+
+<p>
+Andrés quiere mandarle un saludo a su amigo y saber si ya comió.
+¿Puedes ayudarle a escribir el mensaje?
+</p>
+
+<input type="text" id="mensaje2_1" placeholder="Escribe tu mensaje">
+
+<button onclick="enviarMensaje2_1()">Enviar</button>
+
+<div id="res2_1" class="resultado"></div>
+
+<h4>🎮 Botones</h4>
+
+<button onclick="agregarTexto2_1('hola ')">Hola</button>
+<button onclick="agregarTexto2_1('amigo ')">Amigo</button>
+<button onclick="agregarTexto2_1('ya comiste ')">Ya comiste</button>
+
+<h4> Pictogramas</h4>
+
+<img src="imagenes/hola.jpg"
+onclick="agregarTexto2_1('hola ')" width="100">
+
+<img src="imagenes/amigos.png"
+onclick="agregarTexto2_1('amigo ')" width="100">
+
+<img src="imagenes/comer.jpg"
+onclick="agregarTexto2_1('ya comiste ')" width="100">
+
+</div>
+
+
+<!-- SITUACIÓN 2 -->
+<div class="card bonita situacion" id="caja2">
+
+<h3>Situación 2</h3>
+
+<p>
+Debes invitar a tu grupo a participar en una actividad.
+¿Cómo lo harías?
+</p>
+
+<input type="text" id="mensaje2_2" placeholder="Escribe tu mensaje">
+
+<button onclick="enviarMensaje2_2()">Enviar</button>
+
+<div id="res2_2" class="resultado"></div>
+
+<h4>🎮 Botones</h4>
+
+<button onclick="agregarTexto2_2('los invito ')">Los invito</button>
+
+<button onclick="agregarTexto2_2('a participar ')">
+A participar
+</button>
+
+<button onclick="agregarTexto2_2('en la actividad ')">
+En la actividad
+</button>
+
+<h4> Pictogramas</h4>
+
+<img src="imagenes/invito.png"
+onclick="agregarTexto2_2('los invito ')" width="100">
+
+<img src="imagenes/participar.png"
+onclick="agregarTexto2_2('a participar ')" width="100">
+
+<img src="imagenes/actividad.jpg"
+onclick="agregarTexto2_2('en la actividad ')" width="100">
+
+</div>
+
+
+<!-- SITUACIÓN 3 -->
+<div class="card bonita situacion" id="caja3">
+
+<h3>Situación 3</h3>
+
+<p>
+Tu compañero está triste porque no entiende una actividad en línea.
+¿Cómo le escribirías un mensaje amable?
+</p>
+
+<input type="text"
+id="mensaje2_3"
+placeholder="Escribe tu mensaje">
+
+<button onclick="enviarMensaje2_3()">
+Enviar
+</button>
+
+<div id="res2_3" class="resultado"></div>
+
+<h4> Botones</h4>
+
+<button onclick="agregarTexto2_3('hola ')">
+Hola
+</button>
+
+<button onclick="agregarTexto2_3('yo te ayudo ')">
+Yo te ayudo
+</button>
+
+<button onclick="agregarTexto2_3('podemos aprender juntos ')">
+Aprender juntos
+</button>
+
+<button onclick="agregarTexto2_3('animo ')">
+Ánimo
+</button>
+
+<h4>Pictogramas</h4>
+
+<img src="imagenes/hola.jpg"
+onclick="agregarTexto2_3('hola ')" width="100">
+
+<img src="imagenes/ayuda.jpg"
+onclick="agregarTexto2_3('yo te ayudo ')" width="100">
+
+<img src="imagenes/amigos.png"
+onclick="agregarTexto2_3('podemos aprender juntos ')" width="100">
+
+<img src="imagenes/animo.png"
+onclick="agregarTexto2_3('animo ')" width="100">
+
+</div>
+
+</section>
+
+
+<!-- UNIDAD 3 -->
+
+<section id="unidad3" class="seccion">
+
+<div class="explicacion bonita">
+
+<h3>¿Qué es la comunicación segura?</h3>
+
+<p onmouseover="hablar(this.innerText)">
+
+La comunicación segura significa usar la tecnología con cuidado, respeto y responsabilidad.
+
+Cuando usamos internet, chats o redes digitales podemos aprender, jugar y hablar con otras personas.
+
+Sin embargo, también debemos proteger nuestra información y pensar antes de compartir mensajes, imágenes o datos personales.
+
+</p>
+
+<p onmouseover="hablar(this.innerText)">
+
+Cada persona se comunica de manera diferente.
+
+Algunas personas usan palabras, otras pictogramas, imágenes o audios.
+
+Por eso debemos crear espacios digitales donde todos puedan participar y sentirse seguros.
+
+</p>
+
+</div>
+
+<!-- TARJETAS -->
+
+<div class="tarjetas">
+
+<div class="tarjeta seguridad"
+onmouseover="hablar('Hablar con respeto ayuda a convivir mejor y a tener una buena comunicación con otras personas, Usar palabras amables permite expresar ideas y emociones sin lastimar a los demás, favoreciendo la amistad, el respeto y la convivencia en todos los espacios.')">
+
+<img src="imagenes/respetoo.png">
+
+<h3>RESPETO</h3>
+
+<p>
+
+Hablar con respeto ayuda a convivir mejor y a tener una buena comunicación con otras personas. 
+Usar palabras amables permite expresar ideas y emociones sin lastimar a los demás, 
+favoreciendo la amistad, el respeto y la convivencia en todos los espacios.
+
+</p>
+
+</div>
+
+<div class="tarjeta seguridad"
+onmouseover="hablar('Escuchar y comprender ayudó a entender mejor a las demás personas y fortaleció la comunicación, Prestar atención y respetar las opiniones de otros evitó conflictos y favoreció una convivencia positiva.')">
+
+<img src="imagenes/escuchar.jpg">
+
+<h3>ESCUCHAR</h3>
+
+<p>
+
+Escuchar y comprender ayudó a entender mejor a las demás personas y fortaleció la comunicación.
+Prestar atención y respetar las opiniones de otros evitó conflictos y favoreció una convivencia positiva.
+
+</p>
+
+</div>
+
+<div class="tarjeta seguridad"
+onmouseover="hablar('Cuidar la privacidad es importante.')">
+
+<img src="imagenes/privacidad.png">
+
+<h3>PRIVACIDAD</h3>
+
+<p>
+
+No compartir datos personales ayudó a proteger la privacidad y la seguridad en internet.
+Cuidar información como nombres, contraseñas o direcciones evitó riesgos y permitió una comunicación digital más segura.
+
+
+</p>
+
+</div>
+
+<div class="tarjeta seguridad"
+onmouseover="hablar('Pedir ayuda es una decisión inteligente.')">
+
+<img src="imagenes/ayuda.jpg">
+
+<h3>AYUDA</h3>
+
+<p>
+
+Pedir ayuda ayudó a proteger y orientar en situaciones difíciles o desconocidas.
+Buscar apoyo y orientación permitió tomar mejores decisiones y fortaleció la seguridad y la comunicación.
+
+
+</p>
+
+</div>
+
+</div>
+
+<!-- CONSEJOS -->
+
+<div class="instrucciones bonita">
+
+<h4
+onmouseover="hablar('Consejos para comunicarse de forma segura')">
+
+ Consejos para comunicarse de forma segura
+
+</h4>
+
+<ol class="listaBonita">
+
+<li onmouseover="hablar(this.innerText)">
+Habla con respeto y escucha a los demás.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+No compartas información personal.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Pregunta a un adulto si algo te preocupa.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Piensa antes de enviar mensajes o imágenes.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Respeta las diferentes formas de comunicación.
+</li>
+
+</ol>
+
+</div>
+
+<!-- ACTIVIDAD -->
+
+<div class="actividadCompleta bonita">
+
+<h2
+onmouseover="hablar('Actividad inclusiva de comunicación segura')">
+
+ Actividad Inclusiva
+
+</h2>
+
+<!-- INSTRUCCIONES -->
+
+<div class="situacion bonita">
+
+<h3 onmouseover="hablar('Instrucciones')">
+
+ Instrucciones
+
+</h3>
+
+<ol class="listaBonita">
+
+<li onmouseover="hablar(this.innerText)">
+Primero escucha o lee la situación.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Segundo responde como prefieras.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Puedes usar botones, pictogramas o escribir.
+</li>
+
+<li onmouseover="hablar(this.innerText)">
+Todas las respuestas funcionan.
+</li>
+
+</ol>
+
+</div>
+
+<!-- SITUACION 1 -->
+
+<div class="situacion bonita">
+
+<h3 onmouseover="hablar(this.innerText)">
+ Situación 1
+</h3>
+
+<p onmouseover="hablar(this.innerText)">
+
+Un desconocido pide tu contraseña.
+
+¿Qué debes hacer?
+
+</p>
+
+<!-- BOTONES -->
+
+<div class="botonesActividad">
+
+<button onclick="validarS1('nocompartir')">
+No compartir
+</button>
+
+<button onclick="validarS1('compartir')">
+ Compartir
+</button>
+
+</div>
+
+<!-- PICTOGRAMAS -->
+
+<div class="pictogramasMini">
+
+<button onclick="validarS1('nocompartir')">
+<img src="imagenes/no compartir.png" width="100">
+</button>
+
+<button onclick="validarS1('compartir')">
+<img src="imagenes/compartir.png" width="100">
+</button>
+
+</div>
+
+<!-- ESCRIBIR -->
+
+<div class="chatBox">
+
+<input
+type="text"
+id="s1"
+placeholder="Escribe tu respuesta">
+
+<button onclick="validarTexto1()">
+Enviar
+</button>
+
+</div>
+
+<div id="r1"></div>
+
+</div>
+
+<!-- SITUACION 2 -->
+
+<div class="situacion bonita">
+
+<h3 onmouseover="hablar(this.innerText)">
+ Situación 2
+</h3>
+
+<p onmouseover="hablar(this.innerText)">
+
+Un compañero recibe mensajes ofensivos.
+
+¿Qué puedes hacer?
+
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarS2('ayudar')">
+Ayuda 
+</button>
+
+<button onclick="validarS2('burlarse')">
+ Burlarse
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarS2('ayudar')">
+    <img src="imagenes/ayuda.jpg" width="100">
+</button>
+
+<button onclick="validarS2('burlarse')">
+<img src="imagenes/burlarse.png" width="100">
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input
+type="text"
+id="s2"
+placeholder="Escribe tu respuesta">
+
+<button onclick="validarTexto2()">
+Enviar
+</button>
+
+</div>
+
+<div id="r2"></div>
+
+</div>
+
+<!-- SITUACION 3 -->
+
+<div class="situacion bonita">
+
+<h3 onmouseover="hablar(this.innerText)">
+ Situación 3
+</h3>
+
+<p onmouseover="hablar(this.innerText)">
+
+Una página pide fotografías y dirección.
+
+¿Qué haces?
+
+</p>
+
+<div class="botonesActividad">
+
+<button onclick="validarS3('ayuda')">
+ Pedir ayuda
+</button>
+
+<button onclick="validarS3('datos')">
+ Enviar datos
+</button>
+
+</div>
+
+<div class="pictogramasMini">
+
+<button onclick="validarS3('ayuda')">
+<img src="imagenes/pedir ayuda.png" width="100">
+</button>
+
+<button onclick="validarS3('datos')">
+<img src="imagenes/enviar datos.jpg" width="100">
+</button>
+
+</div>
+
+<div class="chatBox">
+
+<input
+type="text"
+id="s3"
+placeholder="Escribe tu respuesta">
+
+<button onclick="validarTexto3()">
+Enviar
+</button>
+
+</div>
+
+<div id="r3"></div>
+
+</div>
+
+</div>
+</section>
+<!--  MISIÓN: MUNDO DIGITAL -->
+
+<section id="evaluacion" class="seccion">
+
+<h2 onmouseover="hablar('Bienvenido a la misión del mundo digital')">
+ MISIÓN: MUNDO DIGITAL
+</h2>
+
+<div class="explicacion bonita">
+
+<p>
+Usa botones, pictogramas o escribe tus respuestas para avanzar.
+Cada decisión cambia tu progreso.
+</p>
+
+</div>
+
+<!-- PROGRESO -->
+<div class="progresoBox">
+<p>Progreso de la misión</p>
+
+<div class="progreso">
+<div id="barraProgreso"></div>
+</div>
+
+<p id="estadoMision">Misión 0 / 6 completadas</p>
+</div>
+
+<!-- 🎮 MISIÓN 1 -->
+<div class="situacion bonita" id="m1">
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<h3> MISIÓN 1: Comunicación</h3>
+<p>¿Qué herramienta usas para comunicarte en línea?</p>
+
+<button onclick="mision(1,'microfono')"> Micrófono</button>
+<button onclick="mision(1,'chat')"> Chat</button>
+<button onclick="mision(1,'imagen')"> Imagen</button>
+
+<!--  PICTOGRAMAS -->
+<div class="pictogramaBox">
+<p>🟩Responde con pictogramas:</p>
+<button onclick="mision(1,'chat')"></button>
+<button onclick="mision(1,'microfono')"></button>
+<button onclick="mision(1,'imagen')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t1" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(1)">Enviar</button>
+</div>
+
+</div>
+
+<!--  MISIÓN 2 -->
+<div class="situacion bonita" id="m2">
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<h3> MISIÓN 2: Seguridad</h3>
+<p>Un desconocido pide tu contraseña. ¿Qué haces?</p>
+
+<button onclick="mision(2,'no')"> No compartir</button>
+<button onclick="mision(2,'si')"> Compartir</button>
+
+<div class="pictogramaBox">
+<p> Pictogramas:</p>
+<button onclick="mision(2,'no')"></button>
+<button onclick="mision(2,'si')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t2" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(2)">Enviar</button>
+</div>
+
+</div>
+
+<!-- MISIÓN 3 -->
+<div class="situacion bonita" id="m3">
+<button class="resetBtn" onclick="reiniciarMision(1)">Reiniciar misión</button>
+<h3>MISIÓN 3: Inclusión</h3>
+<p>¿Qué ayuda a comunicar ideas con dibujos?</p>
+
+<button onclick="mision(3,'pictogramas')"> Pictogramas</button>
+<button onclick="mision(3,'audio')"> Audio</button>
+
+<div class="pictogramaBox">
+<p>🟩 Pictogramas:</p>
+<button onclick="mision(3,'pictogramas')"></button>
+<button onclick="mision(3,'audio')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t3" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(3)">Enviar</button>
+</div>
+
+</div>
+
+<!-- 🎮 MISIÓN 4 -->
+<div class="situacion bonita" id="m4">
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<h3> MISIÓN 4: Fake News</h3>
+<p>¿Qué haces si ves una noticia sospechosa?</p>
+
+<button onclick="mision(4,'verificar')"> Verificar</button>
+<button onclick="mision(4,'compartir')"> Compartir</button>
+
+<div class="pictogramaBox">
+<p>🟩 Pictogramas:</p>
+<button onclick="mision(4,'verificar')"></button>
+<button onclick="mision(4,'compartir')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t4" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(4)">Enviar</button>
+</div>
+
+</div>
+
+<!-- 🎮MISIÓN 5 -->
+<div class="situacion bonita" id="m5">
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<h3> MISIÓN 5: Privacidad</h3>
+<p>¿Cómo proteges tu información en redes?</p>
+
+<button onclick="mision(5,'configurar_privacidad')">Privacidad</button>
+<button onclick="mision(5,'publicar_todo')">🌍 Público</button>
+
+<div class="pictogramaBox">
+<p> Pictogramas:</p>
+<button onclick="mision(5,'configurar_privacidad')"></button>
+<button onclick="mision(5,'publicar_todo')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t5" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(5)">Enviar</button>
+</div>
+
+</div>
+
+<!-- 🎮 MISIÓN 6 -->
+<div class="situacion bonita" id="m6">
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<h3> MISIÓN 6: Ética Digital</h3>
+<p>¿Cómo actúas con otros en internet?</p>
+
+<button onclick="mision(6,'respetar')"> Respetar</button>
+<button onclick="mision(6,'burlarse')"> Burlarse</button>
+
+<div class="pictogramaBox">
+<p> Pictogramas:</p>
+<button onclick="mision(6,'respetar')"></button>
+<button onclick="mision(6,'burlarse')"></button>
+</div>
+
+<div class="chatBox">
+<input id="t6" placeholder="Escribe tu respuesta">
+<button onclick="textoMision(6)">Enviar</button>
+</div>
+
+</div>
+
+<!-- FINAL -->
+<div id="finalJuego" class="bonita"></div>
+
+</section>
+<footer
+onmouseover="hablar('Gracias por visitar la plataforma inclusiva')">
+
+MED Inclusiva Para Todos
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1159,8 +1159,13 @@ Cada decisión cambia tu progreso.
 <!-- 🎮 MISIÓN 1 -->
 <div class="situacion bonita" id="m1">
 <button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3> MISIÓN 1: Comunicación</h3>
-<p>¿Qué herramienta usas para comunicarte en línea?</p>
+<h1>¿Qué herramienta usas para comunicarte en línea?</h1>
 
 <button onclick="mision(1,'microfono')"> Micrófono</button>
 <button onclick="mision(1,'chat')"> Chat</button>
@@ -1168,10 +1173,15 @@ Cada decisión cambia tu progreso.
 
 <!--  PICTOGRAMAS -->
 <div class="pictogramaBox">
-<p>🟩Responde con pictogramas:</p>
-<button onclick="mision(1,'chat')"></button>
-<button onclick="mision(1,'microfono')"></button>
-<button onclick="mision(1,'imagen')"></button>
+<button onclick="mision(1,'chat')">
+    <img src="imagenes/chatpic.png" width="100">
+</button>
+<button onclick="mision(1,'microfono')">
+    <img src="imagenes/micro.jpg" width="100">
+</button>
+<button onclick="mision(1,'imagen')">
+    <img src="imagenes/image.png" width="100">
+</button>
 </div>
 
 <div class="chatBox">
@@ -1183,17 +1193,27 @@ Cada decisión cambia tu progreso.
 
 <!--  MISIÓN 2 -->
 <div class="situacion bonita" id="m2">
-<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión
+</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3> MISIÓN 2: Seguridad</h3>
-<p>Un desconocido pide tu contraseña. ¿Qué haces?</p>
+<h1>Un desconocido pide tu contraseña. ¿Qué haces?</h1>
 
 <button onclick="mision(2,'no')"> No compartir</button>
 <button onclick="mision(2,'si')"> Compartir</button>
 
 <div class="pictogramaBox">
-<p> Pictogramas:</p>
-<button onclick="mision(2,'no')"></button>
-<button onclick="mision(2,'si')"></button>
+
+<button onclick="mision(2,'no')">
+    <img src="imagenes/no.png" width="100">
+</button>
+<button onclick="mision(2,'si')">
+    <img src="imagenes/si.png" width="120">
+</button>
 </div>
 
 <div class="chatBox">
@@ -1206,16 +1226,27 @@ Cada decisión cambia tu progreso.
 <!-- MISIÓN 3 -->
 <div class="situacion bonita" id="m3">
 <button class="resetBtn" onclick="reiniciarMision(1)">Reiniciar misión</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3>MISIÓN 3: Inclusión</h3>
-<p>¿Qué ayuda a comunicar ideas con dibujos?</p>
+<h1>¿Qué ayuda a comunicar ideas con dibujos?</h1>
 
 <button onclick="mision(3,'pictogramas')"> Pictogramas</button>
 <button onclick="mision(3,'audio')"> Audio</button>
 
 <div class="pictogramaBox">
-<p>🟩 Pictogramas:</p>
-<button onclick="mision(3,'pictogramas')"></button>
-<button onclick="mision(3,'audio')"></button>
+
+<button onclick="mision(3,'pictogramas')">
+    <img src="imagenes/picto.jpg" width="100">
+</button>
+</button>
+<button onclick="mision(3,'audio')">
+    <img src="imagenes/audio niño.jpg" width="100">
+</button>   
+</button>
 </div>
 
 <div class="chatBox">
@@ -1228,16 +1259,25 @@ Cada decisión cambia tu progreso.
 <!-- 🎮 MISIÓN 4 -->
 <div class="situacion bonita" id="m4">
 <button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3> MISIÓN 4: Fake News</h3>
-<p>¿Qué haces si ves una noticia sospechosa?</p>
+<h1>¿Qué haces si ves una noticia sospechosa?</h1>
 
 <button onclick="mision(4,'verificar')"> Verificar</button>
 <button onclick="mision(4,'compartir')"> Compartir</button>
 
 <div class="pictogramaBox">
-<p>🟩 Pictogramas:</p>
-<button onclick="mision(4,'verificar')"></button>
-<button onclick="mision(4,'compartir')"></button>
+
+<button onclick="mision(4,'verificar')">
+    <img src="imagenes/mirar.jpg" width="100">
+</button>
+<button onclick="mision(4,'compartir')">
+    <img src="imagenes/compartir.png" width="100">
+</button>
 </div>
 
 <div class="chatBox">
@@ -1250,16 +1290,25 @@ Cada decisión cambia tu progreso.
 <!-- 🎮MISIÓN 5 -->
 <div class="situacion bonita" id="m5">
 <button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3> MISIÓN 5: Privacidad</h3>
-<p>¿Cómo proteges tu información en redes?</p>
+<h1>¿Cómo proteges tu información en redes?</h1>
 
 <button onclick="mision(5,'configurar_privacidad')">Privacidad</button>
 <button onclick="mision(5,'publicar_todo')">🌍 Público</button>
 
 <div class="pictogramaBox">
-<p> Pictogramas:</p>
-<button onclick="mision(5,'configurar_privacidad')"></button>
-<button onclick="mision(5,'publicar_todo')"></button>
+
+<button onclick="mision(5,'configurar_privacidad')">
+<img src="imagenes/privacidad.png" width="100">
+</button>
+<button onclick="mision(5,'publicar_todo')">
+<img src="imagenes/publicar.png" width="100">
+</button>
 </div>
 
 <div class="chatBox">
@@ -1272,16 +1321,25 @@ Cada decisión cambia tu progreso.
 <!-- 🎮 MISIÓN 6 -->
 <div class="situacion bonita" id="m6">
 <button class="resetBtn" onclick="reiniciarMision(1)"> Reiniciar misión</button>
+<div class="reiniciobox">
+    <button onclick="reiniciarMision(1)">
+    <img src="imagenes/reinicio.jpg" width="50">
+</button>
+</div>
 <h3> MISIÓN 6: Ética Digital</h3>
-<p>¿Cómo actúas con otros en internet?</p>
+<h1>¿Cómo actúas con otros en internet?</h1>
 
 <button onclick="mision(6,'respetar')"> Respetar</button>
 <button onclick="mision(6,'burlarse')"> Burlarse</button>
 
 <div class="pictogramaBox">
-<p> Pictogramas:</p>
-<button onclick="mision(6,'respetar')"></button>
-<button onclick="mision(6,'burlarse')"></button>
+
+<button onclick="mision(6,'respetar')">
+<img src="imagenes/respetoo.png" width="100">
+</button>
+<button onclick="mision(6,'burlarse')">
+<img src="imagenes/burlarse.png" width="100">
+</button>
 </div>
 
 <div class="chatBox">

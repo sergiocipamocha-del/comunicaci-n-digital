@@ -250,35 +250,66 @@ hablar('Modo oscuro activado');
 
 }
 
-/* TODO SUENA */
 
-/* LECTURA SOLO EN ELEMENTOS ESPECIFICOS */
 
-document.addEventListener("mouseover",function(e){
+/* LEER CON TAB Y MOUSE */
+
+function leerElemento(e){
+
+let elemento = e.target;
+
+/* ELEMENTOS QUE SI SE LEEN */
 
 if(
-
-e.target.matches(
-
-'h1,h2,h3,h4,p,button,.tarjeta,.preguntaActividad'
-
+elemento.matches(
+'h1,h2,h3,h4,p,button,input,img,li,.tarjeta,.situacion,.card'
 )
-
 ){
 
-let texto=e.target.innerText;
+let texto =
+elemento.innerText ||
+elemento.placeholder ||
+elemento.alt;
 
-if(texto && texto.length<120){
+/* EVITAR LEER VACÍO */
+
+if(!texto) return;
+
+/* EVITAR TEXTOS MUY LARGOS */
+
+if(texto.length > 180) return;
+
+/* EVITAR REPETIR */
+
+if(window.ultimoTexto === texto) return;
+
+window.ultimoTexto = texto;
+
+/* DETENER VOZ ANTERIOR */
 
 speechSynthesis.cancel();
 
+/* PEQUEÑO RETRASO */
+
+setTimeout(()=>{
+
 hablar(texto);
 
-}
+},100);
 
 }
 
-});
+}
+
+document.addEventListener(
+"mouseover",
+leerElemento
+);
+
+document.addEventListener(
+"focusin",
+leerElemento
+);
 
 
 function enviarMensaje(){
@@ -842,11 +873,11 @@ let mensaje = "";
 if(n === 1){
 if(respuesta === "chat"){
 correcto = true;
-mensaje = "💬 Correcto: el chat permite comunicación directa en línea.";
+mensaje = " Correcto: el chat permite comunicación directa en línea.";
 }else if(respuesta === "microfono"){
-mensaje = "🎤 Incorrecto: el micrófono solo sirve para audio, no conversación escrita.";
+mensaje = " Incorrecto: el micrófono solo sirve para audio, no conversación escrita.";
 }else if(respuesta === "imagen"){
-mensaje = "🖼️ Incorrecto: una imagen no permite comunicación.";
+mensaje = " Incorrecto: una imagen no permite comunicación.";
 }
 }
 
@@ -854,9 +885,9 @@ mensaje = "🖼️ Incorrecto: una imagen no permite comunicación.";
 if(n === 2){
 if(respuesta === "no"){
 correcto = true;
-mensaje = "🚫 Correcto: nunca compartas tu contraseña.";
+mensaje = " Correcto: nunca compartas tu contraseña.";
 }else if(respuesta === "si"){
-mensaje = "📤 Incorrecto: compartirla pone en riesgo tu cuenta.";
+mensaje = " Incorrecto: compartirla pone en riesgo tu cuenta.";
 }
 }
 
@@ -864,9 +895,9 @@ mensaje = "📤 Incorrecto: compartirla pone en riesgo tu cuenta.";
 if(n === 3){
 if(respuesta === "pictogramas"){
 correcto = true;
-mensaje = "🧩 Correcto: los pictogramas comunican con imágenes.";
+mensaje = " Correcto: los pictogramas comunican con imágenes.";
 }else if(respuesta === "audio"){
-mensaje = "🔊 Incorrecto: el audio no reemplaza información visual.";
+mensaje = " Incorrecto: el audio no reemplaza información visual.";
 }
 }
 
@@ -874,9 +905,9 @@ mensaje = "🔊 Incorrecto: el audio no reemplaza información visual.";
 if(n === 4){
 if(respuesta === "verificar"){
 correcto = true;
-mensaje = "🔍 Correcto: siempre debes verificar antes de compartir.";
+mensaje = " Correcto: siempre debes verificar antes de compartir.";
 }else if(respuesta === "compartir"){
-mensaje = "📢 Incorrecto: compartir sin verificar difunde noticias falsas.";
+mensaje = " Incorrecto: compartir sin verificar difunde noticias falsas.";
 }
 }
 
@@ -884,9 +915,9 @@ mensaje = "📢 Incorrecto: compartir sin verificar difunde noticias falsas.";
 if(n === 5){
 if(respuesta === "configurar_privacidad"){
 correcto = true;
-mensaje = "🔐 Correcto: la privacidad protege tu información.";
+mensaje = " Correcto: la privacidad protege tu información.";
 }else if(respuesta === "publicar_todo"){
-mensaje = "🌍 Incorrecto: publicar todo expone tu vida personal.";
+mensaje = " Incorrecto: publicar todo expone tu vida personal.";
 }
 }
 
@@ -894,9 +925,9 @@ mensaje = "🌍 Incorrecto: publicar todo expone tu vida personal.";
 if(n === 6){
 if(respuesta === "respetar"){
 correcto = true;
-mensaje = "🤝 Correcto: el respeto en internet es esencial.";
+mensaje = " Correcto: el respeto en internet es esencial.";
 }else if(respuesta === "burlarse"){
-mensaje = "❌ Incorrecto: burlarse causa daño a otros.";
+mensaje = " Incorrecto: burlarse causa daño a otros.";
 }
 }
 
@@ -948,10 +979,10 @@ function finalJuego(){
 if(progreso === 6){
 
 document.getElementById("finalJuego").innerHTML = `
-<h2>🏆 MISIÓN COMPLETADA</h2>
+<h2> MISIÓN COMPLETADA</h2>
 <p>Has terminado todas las misiones del mundo digital.</p>
-<h3>⭐ Calificación: 5.0</h3>
-<p>🎮 Ciudadano digital avanzado</p>
+<h3> Calificación: 5.0</h3>
+<p> Ciudadano digital avanzado</p>
 `;
 
 hablar("Felicitaciones, completaste el juego");
@@ -971,7 +1002,7 @@ document.getElementById("m"+n).style.background = "white";
 let input = document.getElementById("t"+n);
 if(input) input.value = "";
 
-hablar("🔄 Misión reiniciada. Ahora puedes responder otra vez.");
+hablar(" Misión reiniciada. Ahora puedes responder otra vez.");
 
 actualizarBarra();
 }
@@ -1267,3 +1298,25 @@ inputId
 
 }
 
+document.addEventListener("keydown", function(e){
+
+if(
+e.key==="Enter" &&
+document.activeElement.onclick
+){
+document.activeElement.click();
+}
+
+});
+/* ACTIVAR TAB AUTOMATICO */
+
+document.querySelectorAll(
+'h1,h2,h3,h4,p,li,.tarjeta,.card,.situacion,.preguntaActividad,.instrucciones'
+).forEach(function(el){
+
+el.setAttribute(
+'tabindex',
+'0'
+);
+
+});

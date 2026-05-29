@@ -925,3 +925,76 @@ transform: scale(1.05);
 button:active{
 transform: scale(0.98);
 }
+button:focus,
+img:focus,
+input:focus{
+
+outline:4px solid #ff9800;
+border-radius:12px;
+box-shadow:0 0 12px #ff9800;
+
+}
+/* TABLET */
+
+@media(max-width:900px){
+
+.tarjetas,
+.botonesActividad,
+.pictogramasMini{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+
+}
+
+.tarjeta,
+.card{
+
+width:90%;
+margin:auto;
+
+}
+
+}
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+h1{
+font-size:30px;
+}
+
+h2{
+font-size:25px;
+}
+
+p{
+font-size:18px;
+}
+
+button{
+width:90%;
+font-size:18px;
+padding:12px;
+margin:8px auto;
+display:block;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+input{
+width:90%;
+font-size:18px;
+}
+
+.personajeGrande{
+width:180px;
+}
+
+}

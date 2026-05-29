@@ -998,3 +998,44 @@ width:180px;
 }
 
 }
+.footerBonito{
+
+background:linear-gradient(90deg,#1e3a5f,#2b6cb0);
+color:white;
+padding:35px;
+margin-top:40px;
+text-align:center;
+border-top:5px solid #4fc3f7;
+font-size:20px;
+box-shadow:0 -4px 12px rgba(0,0,0,.25);
+
+}
+
+.footerContenido{
+
+max-width:900px;
+margin:auto;
+
+}
+
+.footerBonito h3{
+
+font-size:32px;
+margin-bottom:12px;
+color:#ffd54f;
+
+}
+
+.footerBonito p{
+
+margin:10px 0;
+line-height:1.7;
+
+}
+
+.footerBonito:focus{
+
+outline:4px solid #ffd54f;
+border-radius:12px;
+
+}
